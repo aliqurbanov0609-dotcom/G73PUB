@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="theme-color" content="#050608">
+<title>Garage 73 Pub — Menu</title>
+<style>
+:root{--orange:#ff6a18;--yellow:#f4c542;--blue:#26b9ff;--bg:#050608;--panel:rgba(8,10,13,.94);--text:#f7f7f7;--muted:#b8bdc5}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif}
+button{font:inherit;color:inherit;cursor:pointer;border:0}
+#app{position:fixed;inset:0;overflow:hidden;background:#050608}
+.screen{position:absolute;inset:0;display:none;overflow:hidden;background:#050608}
+.screen.active{display:flex;flex-direction:column}
+.art-screen{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#000}
+.art-hotspot{position:absolute;z-index:4;background:transparent;border:0}
+.lang-az{left:14%;top:64%;width:22%;height:13%}.lang-en{left:39%;top:64%;width:22%;height:13%}.lang-ru{left:64%;top:64%;width:22%;height:13%}
+.hub-kitchen{left:7%;top:31%;width:41%;height:39%}.hub-bar{left:52%;top:31%;width:41%;height:39%}
+#loadingScreen{align-items:center;justify-content:center}
+#loadingScreen img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+.loading-label{position:relative;margin-top:58vh;color:white;text-shadow:0 0 12px #26b9ff;font-weight:900;letter-spacing:.18em}
+.topbar{position:relative;z-index:3;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:calc(env(safe-area-inset-top) + 10px) 14px 10px;background:linear-gradient(#050608f5,#050608c9);border-bottom:1px solid #ffffff18;flex-shrink:0}
+.brand{font-size:clamp(13px,3.8vw,18px);font-weight:900;letter-spacing:.08em;color:var(--orange)}
+.top-actions{display:flex;gap:7px;align-items:center}
+.ui-btn{border:1px solid #ffffff40;background:#12151bdc;border-radius:8px;padding:9px 11px;font-size:12px;font-weight:800;letter-spacing:.04em}
+.ui-btn.primary{border-color:var(--orange);color:#fff;box-shadow:inset 0 0 12px #ff6a1822}
+.page-title{margin:0;padding:14px 16px 8px;font-size:clamp(19px,5vw,27px);font-weight:900;letter-spacing:.045em;text-transform:uppercase;text-shadow:0 0 12px #ff6a1855}
+.page-subtitle{color:var(--muted);font-size:12px;padding:0 16px 10px}
+.cards-wrap{flex:1;min-height:0;padding:8px 12px 10px;display:flex;flex-direction:column}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;align-content:start;overflow:hidden}
+.card{min-width:0;min-height:92px;max-height:23vh;border:1px solid #ffffff25;border-radius:10px;background:linear-gradient(145deg,#1a1d22,#090a0c);position:relative;overflow:hidden;text-align:left;padding:12px;display:flex;flex-direction:column;justify-content:flex-end;gap:7px;box-shadow:0 5px 16px #0008}
+.card:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at top right,#ff6a1824,transparent 65%);pointer-events:none}
+.card-name{position:relative;font-size:clamp(12px,3.2vw,15px);font-weight:900;line-height:1.2;text-transform:uppercase;overflow-wrap:anywhere}
+.card-meta{position:relative;color:var(--yellow);font-size:12px;font-weight:800}
+.card-icon{position:absolute;right:10px;top:8px;color:#ffffff30;font-size:20px;font-weight:900}
+.footer{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 14px calc(env(safe-area-inset-bottom) + 10px);border-top:1px solid #ffffff18;background:#07080bee;flex-shrink:0}
+.footer-note{font-size:11px;color:var(--muted)}
+.pager{display:flex;gap:8px}
+.detail-main{flex:1;min-height:0;overflow:hidden;display:flex;flex-direction:column;padding:12px 16px}
+.detail-image{width:100%;height:min(33vh,280px);object-fit:contain;border-radius:12px;background:radial-gradient(ellipse,#222831,#08090b);border:1px solid #ffffff1e}
+.detail-name{font-size:clamp(21px,6vw,30px);font-weight:900;text-transform:uppercase;margin:14px 0 8px}
+.detail-price{color:var(--yellow);font-weight:900;font-size:23px;margin-bottom:12px}
+.detail-desc{font-size:14px;line-height:1.45;color:#d7dbe0;overflow:auto}
+.detail-composition{margin-top:12px;font-size:13px;color:#aeb5bf;line-height:1.4}
+.empty-photo{display:flex;align-items:center;justify-content:center;color:#ffffff35;font-size:54px}
+.lang-picker{display:flex;gap:4px}
+.lang-picker button{padding:7px 8px;border-radius:6px;background:#191c22;color:#bbb;font-size:11px;font-weight:900}
+.lang-picker button.selected{background:var(--orange);color:#fff}
+@media (min-width:700px){.cards{grid-template-columns:repeat(3,minmax(0,1fr))}.card{max-height:24vh}.detail-main{max-width:700px;width:100%;align-self:center}.detail-image{height:35vh}}
+</style>
+</head>
+<body>
+<div id="app">
+  <section id="languageScreen" class="screen active" aria-label="Language selection">
+    <img class="art-screen" src="assets/screens/SCREEN_01_LANG.jpg" alt="Choose language">
+    <button class="art-hotspot lang-az" onclick="chooseLanguage('az')" aria-label="Azərbaycan dili"></button>
+    <button class="art-hotspot lang-en" onclick="chooseLanguage('en')" aria-label="English"></button>
+    <button class="art-hotspot lang-ru" onclick="chooseLanguage('ru')" aria-label="Русский"></button>
+  </section>
+  <section id="loadingScreen" class="screen" aria-label="Loading">
+    <img src="assets/screens/SCREEN_02_LOADING.jpg" alt="">
+    <div class="loading-label" id="loadingLabel">LOADING…</div>
+  </section>
+  <section id="hubScreen" class="screen" aria-label="Sections">
+    <img class="art-screen" src="assets/screens/SCREEN_03_HUB.jpg" alt="Kitchen and Bar">
+    <button class="art-hotspot hub-kitchen" onclick="openSection('kitchen')" aria-label="Kitchen"></button>
+    <button class="art-hotspot hub-bar" onclick="openSection('bar')" aria-label="Bar"></button>
+    <div class="topbar" style="position:absolute;top:0;left:0;right:0;background:transparent;border:0">
+      <div class="brand">GARAGE 73 PUB</div><div class="lang-picker" id="hubLanguages"></div>
+    </div>
+  </section>
+  <section id="listScreen" class="screen">
+    <header class="topbar">
+      <button class="ui-btn" onclick="goBack()" id="backBtn">← BACK</button>
+      <div class="brand">GARAGE 73 PUB</div>
+      <div class="lang-picker" id="listLanguages"></div>
+    </header>
+    <h1 class="page-title" id="listTitle"></h1>
+    <div class="page-subtitle" id="listSubtitle"></div>
+    <main class="cards-wrap"><div class="cards" id="cards"></div></main>
+    <footer class="footer"><span class="footer-note" id="pageCount"></span><div class="pager"><button class="ui-btn" id="prevBtn" onclick="changePage(-1)">←</button><button class="ui-btn" id="nextBtn" onclick="changePage(1)">→</button></div></footer>
+  </section>
+  <section id="detailScreen" class="screen">
+    <header class="topbar">
+      <button class="ui-btn" onclick="goBack()" id="detailBack">← BACK</button>
+      <div class="brand">GARAGE 73 PUB</div>
+      <div class="lang-picker" id="detailLanguages"></div>
+    </header>
+    <main class="detail-main" id="detailMain"></main>
+    <footer class="footer"><button class="ui-btn" onclick="goHome()" id="homeBtn">⌂ HOME</button><span class="footer-note">GARAGE 73 PUB</span><span></span></footer>
+  </section>
+</div>
+<script src="menu-database.js"></script>
+<script>
+(function(){
+'use strict';
+const $=id=>document.getElementById(id);
+let lang='en', sectionKey='', categoryId='', page=0, selectedItem=null;
+const pageSize=6, stack=[];
+const ui=()=>MENU_DATABASE.ui[lang]||MENU_DATABASE.ui.en;
+const t=value=>typeof value==='string'?value:(value?.[lang]||value?.en||value?.ru||'');
+function show(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));$(id).classList.add('active');}
+function makeLanguageButtons(target){const root=$(target);root.innerHTML='';[['az','AZ'],['en','EN'],['ru','RU']].forEach(([key,label])=>{const b=document.createElement('button');b.textContent=label;b.className=lang===key?'selected':'';b.onclick=()=>setLanguage(key);root.appendChild(b);});}
+window.chooseLanguage=function(value){lang=value; $('loadingLabel').textContent=ui().loading.toUpperCase();show('loadingScreen');setTimeout(()=>{makeLanguageButtons('hubLanguages');show('hubScreen');},650);};
+window.setLanguage=function(value){lang=value;document.documentElement.lang=lang;makeLanguageButtons('hubLanguages');makeLanguageButtons('listLanguages');makeLanguageButtons('detailLanguages');if($('listScreen').classList.contains('active'))renderList();if($('detailScreen').classList.contains('active'))renderDetail();};
+window.openSection=function(key){sectionKey=key;categoryId='';page=0;stack.length=0;stack.push({type:'hub'});renderList();show('listScreen');};
+function findCategory(){return (MENU_DATABASE.sections[sectionKey]||[]).find(c=>c.id===categoryId);}
+function allEntries(){const cat=findCategory();return cat?cat.items:[];}
+function formatPrice(item){let prices=item.prices||[];if(item.variants?.length)return item.variants.map(v=>{let vol=v.volumeMl>=1000?(v.volumeMl/1000)+'L':v.volumeMl+'ml';return vol+' — '+v.price+' ₼';}).join(' · ');if(!prices.length)return '';return prices.map(p=>p.amount+' ₼').join(' / ');}
+function renderList(){
+ const categories=MENU_DATABASE.sections[sectionKey]||[];
+ const cat=findCategory();
+ const title=$('listTitle'), subtitle=$('listSubtitle'), cards=$('cards');
+ title.textContent=cat?t(cat.name):ui()[sectionKey]||sectionKey.toUpperCase();
+ $('backBtn').textContent='← '+ui().back;
+ makeLanguageButtons('listLanguages');cards.innerHTML='';
+ let data=cat?cat.items:categories;
+ const totalPages=Math.max(1,Math.ceil(data.length/pageSize));page=Math.min(page,totalPages-1);
+ const slice=data.slice(page*pageSize,(page+1)*pageSize);
+ subtitle.textContent=cat?(lang==='ru'?'Выберите позицию':lang==='az'?'Məhsul seçin':'Select an item'):(lang==='ru'?'Выберите категорию':lang==='az'?'Kateqoriya seçin':'Choose a category');
+ slice.forEach((entry,i)=>{const b=document.createElement('button');b.className='card';const icon=document.createElement('span');icon.className='card-icon';icon.textContent=cat?'＋':'◆';const name=document.createElement('span');name.className='card-name';name.textContent=cat?t(entry.name):t(entry.name);const meta=document.createElement('span');meta.className='card-meta';meta.textContent=cat?formatPrice(entry):(lang==='ru'?'Открыть →':lang==='az'?'Aç →':'OPEN →');b.append(icon,name,meta);b.onclick=()=>{if(cat){selectedItem=entry;stack.push({type:'list',categoryId});renderDetail();show('detailScreen');}else{categoryId=entry.id;page=0;stack.push({type:'categories'});renderList();}};cards.appendChild(b);});
+ $('pageCount').textContent=(page+1)+' / '+totalPages+'  ·  '+data.length;
+ $('prevBtn').disabled=page===0;$('nextBtn').disabled=page>=totalPages-1;
+ $('prevBtn').style.opacity=page===0?'.35':'1';$('nextBtn').style.opacity=page>=totalPages-1?'.35':'1';
+}
+function renderDetail(){
+ if(!selectedItem)return;makeLanguageButtons('detailLanguages');
+ $('detailBack').textContent='← '+ui().back;$('homeBtn').textContent='⌂ '+ui().home;
+ const item=selectedItem, name=t(item.name), price=formatPrice(item);
+ const main=$('detailMain');main.innerHTML='';
+ const img=document.createElement('img');img.className='detail-image';img.alt=name;
+ img.src=item.image||'';img.onerror=()=>{img.removeAttribute('src');img.classList.add('empty-photo');img.alt='';img.style.height='0';img.style.border='0';img.style.padding='0';};
+ const heading=document.createElement('div');heading.className='detail-name';heading.textContent=name;
+ const cost=document.createElement('div');cost.className='detail-price';cost.textContent=price;
+ const descText=t(item.description);const desc=document.createElement('div');desc.className='detail-desc';desc.textContent=descText;
+ main.append(img,heading,cost);if(descText)main.appendChild(desc);
+ if(item.composition){const comp=document.createElement('div');comp.className='detail-composition';comp.textContent=(lang==='ru'?'Состав: ':lang==='az'?'Tərkibi: ':'Ingredients: ')+t(item.composition);main.appendChild(comp);}
+}
+window.changePage=function(delta){const cats=MENU_DATABASE.sections[sectionKey]||[],cat=findCategory(),data=cat?cat.items:cats;const pages=Math.max(1,Math.ceil(data.length/pageSize));page=Math.max(0,Math.min(pages-1,page+delta));renderList();};
+window.goBack=function(){if(stack.length<=1){goHome();return;}const previous=stack.pop();if(previous.type==='hub'){goHome();return;}if(previous.type==='categories'){categoryId='';page=0;renderList();show('listScreen');return;}if(previous.type==='list'){categoryId=previous.categoryId;page=0;renderList();show('listScreen');return;}goHome();};
+window.goHome=function(){sectionKey='';categoryId='';selectedItem=null;page=0;stack.length=0;makeLanguageButtons('hubLanguages');show('hubScreen');};
+document.addEventListener('keydown',e=>{if(e.key==='Escape'||e.key==='Backspace'){e.preventDefault();goBack();}});
+let touchX=0;document.addEventListener('touchstart',e=>{touchX=e.changedTouches[0].clientX},{passive:true});document.addEventListener('touchend',e=>{if(!$('listScreen').classList.contains('active'))return;const dx=e.changedTouches[0].clientX-touchX;if(Math.abs(dx)>65)changePage(dx<0?1:-1)},{passive:true});
+makeLanguageButtons('hubLanguages');
+})();
+</script>
+</body>
+</html>
