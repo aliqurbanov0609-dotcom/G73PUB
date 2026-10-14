@@ -1,45 +1,293 @@
 {
   "kitchenCategories": [
-    {"id":"sandwiches","name":"SANDWICHES & BREAKFAST","items":[
-      {"id":"full-english","name":"FULL ENGLISH BREAKFAST","price":"16","image":"assets/photos/kitchen-dishes.jpg","ingredients":{"EN":["Eggs, bacon and sausages","Toast, mushrooms and tomatoes"],"AZ":["Yumurta, bekon və kolbasa","Tost, göbələk və pomidor"],"RU":["Яйца, бекон и сосиски","Тосты, грибы и томаты"]},"about":{"EN":"A hearty classic breakfast served hot from our kitchen.","AZ":"Mətbəximizdən isti təqdim olunan doyumlu klassik səhər yeməyi.","RU":"Сытный классический завтрак, подаётся горячим."}},
-      {"id":"omelette","name":"OMELETTE","price":"9","image":"assets/photos/omelette-hero.jpg","ingredients":{"EN":["Eggs","Sausages and bacon","Mushrooms","Fresh greens"],"AZ":["Yumurta","Kolbasa və bekon","Göbələk","Təzə göyərti"],"RU":["Яйца","Колбаски и бекон","Грибы","Свежая зелень"]},"about":{"EN":"Omelette made fresh in our kitchen, served with a little old-school pub spirit.","AZ":"Mətbəximizdə təzə hazırlanmış omlet, pub üslubunda təqdim olunur.","RU":"Омлет, приготовленный на нашей кухне и поданный в духе классического паба."}},
-      {"id":"hamburger","name":"HAMBURGER","price":"13","image":"assets/photos/kitchen-hero.jpg","ingredients":{"EN":["Beef patty","Sesame bun","Cheddar, lettuce and sauce"],"AZ":["Mal əti kotleti","Küncütlü bulka","Çedar, kahı və sous"],"RU":["Говяжья котлета","Булочка с кунжутом","Чеддер, салат и соус"]},"about":{"EN":"A juicy pub burger with classic toppings.","AZ":"Klassik əlavələrlə şirəli pub burgeri.","RU":"Сочный паб-бургер с классическими добавками."}},
-      {"id":"chicken-burger","name":"CHICKEN BURGER","price":"12","image":"assets/photos/kitchen-hero.jpg","ingredients":{"EN":["Chicken fillet","Sesame bun","Lettuce and house sauce"],"AZ":["Toyuq filesi","Küncütlü bulka","Kahı və xüsusi sous"],"RU":["Куриное филе","Булочка с кунжутом","Салат и фирменный соус"]},"about":{"EN":"Crispy chicken, fresh lettuce and house sauce in a toasted bun.","AZ":"Qızarmış toyuq, təzə kahı və xüsusi sous, qızardılmış bulkada.","RU":"Хрустящая курица, свежий салат и фирменный соус в поджаренной булочке."}},
-      {"id":"chicken-sandwich","name":"CHICKEN BREAST SANDWICH","price":"13","image":"assets/photos/kitchen-dishes.jpg"},
-      {"id":"club-sandwich","name":"CLUB SANDWICH","price":"15","image":"assets/photos/kitchen-dishes.jpg"},
-      {"id":"steak-sandwich","name":"STEAK SANDWICH","price":"15","image":"assets/photos/kitchen-dishes.jpg"},
-      {"id":"fish-sandwich","name":"FISH SANDWICH","price":"13","image":"assets/photos/kitchen-dishes.jpg"},
-      {"id":"toast-sandwich","name":"TOAST SANDWICH","price":"8","image":"assets/photos/kitchen-dishes.jpg"},
-      {"id":"chili-hotdogs","name":"CHILI CHEESE HOT DOGS","price":"6","image":"assets/photos/kitchen-dishes.jpg"},
-      {"id":"mexicana","name":"ALA MEXICANA SANDWICH","price":"13 / 11","image":"assets/photos/kitchen-dishes.jpg"},
-      {"id":"mix-salami","name":"MIX SALAMI SANDWICH","price":"15","image":"assets/photos/kitchen-dishes.jpg"},
-      {"id":"smoked-beef","name":"SMOKED BEEF SANDWICH","price":"12","image":"assets/photos/kitchen-dishes.jpg"},
-      {"id":"smoked-turkey","name":"SMOKED TURKEY SANDWICH","price":"12","image":"assets/photos/kitchen-dishes.jpg"},
-      {"id":"smoked-salmon","name":"SMOKED SALMON SANDWICH","price":"15","image":"assets/photos/kitchen-dishes.jpg"},
-      {"id":"bacon-roll","name":"BACON ROLL","price":"7","image":"assets/photos/kitchen-dishes.jpg"},
-      {"id":"liver-onion","name":"LIVER ONION ROLL","price":"6","image":"assets/photos/kitchen-dishes.jpg"},
-      {"id":"quesadillas","name":"QUESADILLAS","price":"13","image":"assets/photos/kitchen-dishes.jpg"},
-      {"id":"burrito-wrap","name":"BURRITO WRAP","price":"—","image":"assets/photos/kitchen-dishes.jpg"}
-    ]},
-    {"id":"soups","name":"SOUPS","items":[{"id":"soup-of-day","name":"SOUP OF THE DAY","price":"—","image":"assets/photos/kitchen-dishes.jpg"}]},
-    {"id":"salads","name":"SALADS","items":[{"id":"caesar-salad","name":"CAESAR SALAD","price":"—","image":"assets/photos/kitchen-dishes.jpg"}]},
-    {"id":"starters","name":"STARTERS","items":[{"id":"onion-rings","name":"ONION RINGS","price":"5","image":"assets/photos/kitchen-dishes.jpg"},{"id":"chicken-nuggets","name":"CHICKEN CAJUN NUGGETS","price":"8","image":"assets/photos/kitchen-dishes.jpg"},{"id":"potato-skins","name":"POTATO SKINS","price":"6","image":"assets/photos/kitchen-dishes.jpg"}]},
-    {"id":"pasta","name":"PASTA & GARNISH","items":[{"id":"pasta","name":"PASTA","price":"—","image":"assets/photos/kitchen-dishes.jpg"}]},
-    {"id":"poultry","name":"MAIN COURSE POULTRY","items":[{"id":"chicken-main","name":"CHICKEN MAIN COURSE","price":"—","image":"assets/photos/kitchen-dishes.jpg"}]},
-    {"id":"seafood","name":"MAIN COURSE SEA FOOD","items":[{"id":"fish-main","name":"SEAFOOD MAIN COURSE","price":"—","image":"assets/photos/kitchen-dishes.jpg"}]},
-    {"id":"meat","name":"MAIN COURSE MEAT","items":[{"id":"steak-main","name":"STEAK","price":"—","image":"assets/photos/kitchen-dishes.jpg"}]},
-    {"id":"desserts","name":"DESSERTS & HOT DRINKS","items":[{"id":"dessert","name":"DESSERT OF THE DAY","price":"—","image":"assets/photos/kitchen-dishes.jpg"}]}
+    {
+      "id": "sandwiches",
+      "name": "SANDWICHES & BREAKFAST",
+      "items": [
+        {"id": "full-english", "name": "FULL ENGLISH BREAKFAST", "price": "16", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "omelette", "name": "OMELETTE", "price": "9", "image": "assets/photos/omelette-hero.jpg"},
+        {"id": "hamburger", "name": "HAMBURGER", "price": "13", "image": "assets/photos/kitchen-hero.jpg"},
+        {"id": "chicken-burger", "name": "CHICKEN BURGER", "price": "12", "image": "assets/photos/kitchen-hero.jpg"},
+        {"id": "chicken-sandwich", "name": "CHICKEN BREAST SANDWICH", "price": "13", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "club-sandwich", "name": "CLUB SANDWICH", "price": "15", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "steak-sandwich", "name": "STEAK SANDWICH", "price": "15", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "fish-sandwich", "name": "FISH SANDWICH", "price": "13", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "toast-sandwich", "name": "TOAST SANDWICH", "price": "8", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "chili-hotdogs", "name": "CHILI CHEESE HOT DOGS", "price": "6", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "mexicana", "name": "ALA MEXICANA SANDWICH", "price": "13 / 11", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "mix-salami", "name": "MIX SALAMI SANDWICH", "price": "15", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "smoked-beef", "name": "SMOKED BEEF SANDWICH", "price": "12", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "smoked-turkey", "name": "SMOKED TURKEY SANDWICH", "price": "12", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "smoked-salmon", "name": "SMOKED SALMON SANDWICH", "price": "15", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "bacon-roll", "name": "BACON ROLL", "price": "7", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "liver-onion", "name": "LIVER ONION ROLL", "price": "6", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "quesadillas", "name": "QUESADILLAS", "price": "13", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "burrito-wrap", "name": "BURRITO WRAP", "price": "19 / 17", "image": "assets/photos/kitchen-dishes.jpg"}
+      ]
+    },
+    {
+      "id": "soups",
+      "name": "SOUPS",
+      "items": [
+        {"id": "dushbara", "name": "DUSHBARA", "price": "5", "image": "assets/photos/kitchen-dishes.jpg"}
+      ]
+    },
+    {
+      "id": "salads",
+      "name": "SALADS",
+      "items": [
+        {"id": "tuna-salad", "name": "TUNA FISH SALAD", "price": "8", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "chicken-salad", "name": "CHICKEN SALAD", "price": "7", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "caesar-salad", "name": "CHICKEN CAESAR SALAD", "price": "10", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "seafood-caesar", "name": "SEAFOOD CAESAR SALAD", "price": "14", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "greek-salad", "name": "GREEK SALAD", "price": "7", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "fresh-salad", "name": "FRESH SALAD", "price": "6", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "shrimp-cocktail", "name": "SHRIMP COCKTAIL", "price": "12", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "smoked-salmon-salad", "name": "SMOKED SALMON SALAD", "price": "14", "image": "assets/photos/kitchen-dishes.jpg"}
+      ]
+    },
+    {
+      "id": "starters",
+      "name": "STARTERS",
+      "items": [
+        {"id": "onion-rings", "name": "ONION RINGS", "price": "5", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "cajun-nuggets", "name": "CHICKEN CAJUN NUGGETS", "price": "8", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "potato-skins", "name": "POTATO SKINS", "price": "6", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "fried-mushroom", "name": "DEEP FRIED MUSHROOM", "price": "7", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "scampi", "name": "SCAMPI", "price": "10", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "chicken-wings", "name": "CHICKEN WINGS", "price": "8", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "cheese-nachos", "name": "CHEESE NACHOS", "price": "10", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "beef-nachos", "name": "BEEF CHEESE NACHOS", "price": "15", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "chicken-nachos", "name": "CHICKEN CHEESE NACHOS", "price": "13", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "spring-rolls", "name": "SPRING ROLLS", "price": "6", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "smoked-cheese", "name": "DEEP FRIED SMOKED CHEESE", "price": "6", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "halloumi", "name": "DEEP FRIED HALLOUMI CHEESE", "price": "7", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "khinkali", "name": "KHINKALI WITH AJIKA SAUCE", "price": "5", "image": "assets/photos/kitchen-dishes.jpg"}
+      ]
+    },
+    {
+      "id": "pasta",
+      "name": "PASTA & GARNISH",
+      "items": [
+        {"id": "bolognese", "name": "SPAGHETTI BOLOGNESE", "price": "12", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "carbonara", "name": "SPAGHETTI CARBONARA", "price": "12", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "alfredo", "name": "PENNE ALFREDO", "price": "12", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "arrabbiata", "name": "PENNE ALL ARRABBIATA", "price": "10", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "singapore-noodles", "name": "SINGAPORE NOODLES", "price": "12", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "fried-rice", "name": "SPECIAL FRIED RICE", "price": "12", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "mashed-potato", "name": "GARLIC CHEESE MASHED POTATO", "price": "7", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "french-fries", "name": "FRENCH FRIES", "price": "6", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "fries-cheese", "name": "FRENCH FRIES WITH CHEESE", "price": "8", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "pizza-salami", "name": "PIZZA WITH SALAMI", "price": "14", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "pizza-chicken", "name": "PIZZA WITH CHICKEN", "price": "14", "image": "assets/photos/kitchen-dishes.jpg"}
+      ]
+    },
+    {
+      "id": "poultry",
+      "name": "MAIN COURSE POULTRY",
+      "items": [
+        {"id": "manchurian-chicken", "name": "MANCHURIAN CHICKEN", "price": "15", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "chicken-italiano", "name": "CHICKEN ALA ITALIANO", "price": "14", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "cordon-blue", "name": "CHICKEN CORDON BLUE", "price": "15", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "chicken-parisienne", "name": "CHICKEN ALA PARISIENNE", "price": "15", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "chicken-korma", "name": "CHICKEN KORMA", "price": "15", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "chicken-tikka", "name": "CHICKEN TIKKA MASALA", "price": "14", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "schnitzel", "name": "SCHNITZEL", "price": "10", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "chicken-pie", "name": "CHICKEN PIE", "price": "12", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "chicken-curry", "name": "CHICKEN CURRY", "price": "15", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "chicken-prawns", "name": "CHICKEN WITH PRAWNS", "price": "20", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "chicken-fajitas", "name": "CHICKEN FAJITAS", "price": "15", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "roast-chicken", "name": "ROAST CHICKEN", "price": "10", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "chicken-stick", "name": "CHICKEN KABAB ON THE STICK", "price": "13", "image": "assets/photos/kitchen-dishes.jpg"}
+      ]
+    },
+    {
+      "id": "seafood",
+      "name": "MAIN COURSE SEA FOOD",
+      "items": [
+        {"id": "fish-chips", "name": "FISH AND CHIPS", "price": "15", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "special-prawns", "name": "SPECIAL PRAWNS", "price": "19", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "mushroom-prawns", "name": "MUSHROOM PRAWNS", "price": "20", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "prawns-chicken", "name": "PRAWNS WITH CHICKEN", "price": "20", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "prawns-bacon", "name": "PRAWNS WRAPPED IN BACON", "price": "20", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "breaded-prawns", "name": "BREADED PRAWNS WITH TARTAR SAUCE", "price": "20", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "sturgeon-kebab", "name": "STURGEON KEBAB", "price": "25", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "sturgeon-milanese", "name": "STURGEON MILANESE", "price": "30", "image": "assets/photos/kitchen-dishes.jpg"}
+      ]
+    },
+    {
+      "id": "meat",
+      "name": "MAIN COURSE MEAT",
+      "items": [
+        {"id": "steak-pie", "name": "STEAK PIE", "price": "15", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "bangers-mash", "name": "BANGERS AND MASH", "price": "13", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "chorizo-steak", "name": "CHORIZO STEAK", "price": "30", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "sabana-steak", "name": "SABANA STEAK", "price": "30", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "steak", "name": "STEAK", "price": "30", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "fillet-mignon", "name": "FILLET MIGNON", "price": "30", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "veal-parisienne", "name": "VEAL ALA PARISIENNE", "price": "22", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "pork-chop", "name": "PORK CHOP", "price": "22", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "beef-stick", "name": "BEEF KABAB ON THE STICK", "price": "25", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "bacon-steak", "name": "GRILLED BACON STEAK", "price": "12", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "lamb-chops", "name": "LAMB CHOPS KEBAB", "price": "18", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "ribeye", "name": "RIBEYE STEAK", "price": "30", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "liver-bacon", "name": "LIVER ONION BACON", "price": "17", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "osso-buco", "name": "OSSO BUCO", "price": "20", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "lamb-shank", "name": "LAMB SHANK", "price": "20", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "beef-sausage", "name": "BEEF SAUSAGE WITH CHIPS", "price": "8", "image": "assets/photos/kitchen-dishes.jpg"}
+      ]
+    },
+    {
+      "id": "desserts",
+      "name": "DESSERTS & HOT DRINKS",
+      "items": [
+        {"id": "apple-pie", "name": "APPLE PIE", "price": "5", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "ice-cream", "name": "ICE CREAM", "price": "5", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "tea", "name": "TEA", "price": "2", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "coffee", "name": "COFFEE", "price": "5", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "cappuccino", "name": "CAPPUCCINO", "price": "5", "image": "assets/photos/kitchen-dishes.jpg"},
+        {"id": "hot-chocolate", "name": "HOT CHOCOLATE", "price": "5", "image": "assets/photos/kitchen-dishes.jpg"}
+      ]
+    }
   ],
   "barCategories": [
-    {"id":"draft-beer","name":"DRAFT BEER","items":[{"name":"GARAGE SPECIAL","price":"4 / 5","note":"Different sizes"},{"name":"GRIMBERGEN","price":"7 / 8","note":"Different sizes"},{"name":"GUINNESS","price":"8 / 10","note":"Different sizes"}]},
-    {"id":"bottled-beer","name":"BOTTLED BEER & CIDER","items":[{"name":"CORONA","price":"—"},{"name":"HEINEKEN","price":"—"},{"name":"CIDER","price":"—"}]},
-    {"id":"whiskey","name":"WHISKEY","items":[{"name":"JACK DANIEL'S","price":"—"},{"name":"MACALLAN 12","price":"—"},{"name":"JAMESON","price":"—"}]},
-    {"id":"rum","name":"RUM","items":[{"name":"HAVANA CLUB","price":"—"},{"name":"BACARDI","price":"—"}]},
-    {"id":"gin","name":"GIN","items":[{"name":"BOMBAY SAPPHIRE","price":"—"},{"name":"GIN & TONIC","price":"—"}]},
-    {"id":"vermouth","name":"VERMOUTH","items":[{"name":"MARTINI BIANCO","price":"—"},{"name":"MARTINI ROSSO","price":"—"}]},
-    {"id":"wine","name":"WINE & PROSECCO","items":[{"name":"RED WINE","price":"—"},{"name":"WHITE WINE","price":"—"},{"name":"MOËT","price":"—"}]},
-    {"id":"liqueurs","name":"LIQUEURS & BITTERS","items":[{"name":"JÄGERMEISTER","price":"—"},{"name":"BAILEYS","price":"—"}]},
-    {"id":"other","name":"OTHER SPIRITS","items":[{"name":"GREY GOOSE VODKA","price":"—"},{"name":"TEQUILA","price":"—"}]},
-    {"id":"soft","name":"SOFT DRINKS","items":[{"name":"COCA-COLA","price":"—"},{"name":"RED BULL","price":"—"},{"name":"WATER","price":"—"}]}
+    {
+      "id": "draft-beer",
+      "name": "DRAFT BEER",
+      "items": [
+        {"name": "GARAGE SPECIAL (0.3L / 0.5L)", "price": "4 / 5"},
+        {"name": "GRIMBERGEN (0.3L / 0.5L)", "price": "7 / 8"},
+        {"name": "GUINNESS (0.3L / 0.5L)", "price": "8 / 10"}
+      ]
+    },
+    {
+      "id": "bottled-beer",
+      "name": "BOTTLED BEER & CIDER",
+      "items": [
+        {"name": "HEINEKEN", "price": "7"},
+        {"name": "CORONA", "price": "8"},
+        {"name": "MILLER", "price": "6"},
+        {"name": "STELLA ARTOIS", "price": "8"},
+        {"name": "EFES BOTTLE", "price": "5"},
+        {"name": "EFES CAN", "price": "6"},
+        {"name": "XIRDALAN", "price": "5"},
+        {"name": "XIRDALAN UNFILTERED", "price": "5"},
+        {"name": "ERDINGER LIGHT / DARK", "price": "10"},
+        {"name": "STRONGBOW", "price": "9"},
+        {"name": "MAGNERS", "price": "9"}
+      ]
+    },
+    {
+      "id": "whiskey",
+      "name": "WHISKEY",
+      "items": [
+        {"name": "GLENFIDDICH 12", "price": "15"},
+        {"name": "GLENFIDDICH 18", "price": "22"},
+        {"name": "GLENLIVET 12", "price": "15"},
+        {"name": "GLENMORANGIE", "price": "15"},
+        {"name": "MACALLAN", "price": "15"},
+        {"name": "TALISKER SKYE", "price": "15"},
+        {"name": "TALISKER 10", "price": "20"},
+        {"name": "TAMNAVULIN", "price": "15"},
+        {"name": "KAVALAN", "price": "15"},
+        {"name": "LAPHROAIG", "price": "15"},
+        {"name": "BALLANTINE'S", "price": "8"},
+        {"name": "BLACK LABEL", "price": "10"},
+        {"name": "RED LABEL", "price": "8"},
+        {"name": "CHIVAS REGAL 12", "price": "10"},
+        {"name": "MONKEY SHOULDER", "price": "10"},
+        {"name": "JAMESON", "price": "8"},
+        {"name": "BUSHMILLS", "price": "8"},
+        {"name": "JACK DANIEL'S", "price": "10"},
+        {"name": "JIM BEAM", "price": "8"},
+        {"name": "J&B", "price": "8"}
+      ]
+    },
+    {
+      "id": "rum",
+      "name": "RUM",
+      "items": [
+        {"name": "CAPTAIN MORGAN SPICED GOLD", "price": "7"},
+        {"name": "CAPTAIN MORGAN DARK RUM", "price": "7"},
+        {"name": "BACARDI CARTA BLANCA", "price": "7"}
+      ]
+    },
+    {
+      "id": "gin",
+      "name": "GIN",
+      "items": [
+        {"name": "GORDON'S", "price": "7"},
+        {"name": "BOMBAY SAPPHIRE", "price": "7"},
+        {"name": "PINK GIN", "price": "9"},
+        {"name": "HENDRICK'S", "price": "9"}
+      ]
+    },
+    {
+      "id": "vermouth",
+      "name": "VERMOUTH",
+      "items": [
+        {"name": "MARTINI BIANCO", "price": "8"},
+        {"name": "MARTINI ROSSO", "price": "8"},
+        {"name": "MARTINI EXTRA DRY", "price": "8"}
+      ]
+    },
+    {
+      "id": "wine",
+      "name": "WINE & PROSECCO",
+      "items": [
+        {"name": "SAVALAN MERLOT (150ml / 750ml)", "price": "7 / 40"},
+        {"name": "CALVET MERLOT (150ml / 750ml)", "price": "10 / 50"},
+        {"name": "HILLSIDE PINOT GRIGIO (150ml / 750ml)", "price": "7 / 40"},
+        {"name": "PINOT GRIGIO (150ml / 750ml)", "price": "10 / 50"},
+        {"name": "PROSECCO ASTORIA (150ml / 750ml)", "price": "12 / 50"}
+      ]
+    },
+    {
+      "id": "liqueurs",
+      "name": "LIQUEURS & BITTERS",
+      "items": [
+        {"name": "ABSINTHE", "price": "10"},
+        {"name": "SAMBUCA", "price": "10"},
+        {"name": "JÄGERMEISTER", "price": "6"},
+        {"name": "DISARONNO", "price": "8"},
+        {"name": "DRAMBUIE", "price": "8"},
+        {"name": "HEERING", "price": "8"},
+        {"name": "GRAND MARNIER", "price": "8"},
+        {"name": "COINTREAU", "price": "8"},
+        {"name": "AMARETTO", "price": "8"},
+        {"name": "KAHLUA", "price": "8"},
+        {"name": "BAILEYS", "price": "8"},
+        {"name": "CAMPARI", "price": "8"},
+        {"name": "APEROL", "price": "8"},
+        {"name": "MALIBU", "price": "8"}
+      ]
+    },
+    {
+      "id": "other",
+      "name": "OTHER SPIRITS",
+      "items": [
+        {"name": "RAKI", "price": "7"},
+        {"name": "VODKA", "price": "6"},
+        {"name": "TEQUILA", "price": "7"},
+        {"name": "COGNAC", "price": "10"}
+      ]
+    },
+    {
+      "id": "soft",
+      "name": "SOFT DRINKS",
+      "items": [
+        {"name": "RED BULL", "price": "6"},
+        {"name": "COLA", "price": "4"},
+        {"name": "COLA ZERO", "price": "4"},
+        {"name": "FANTA", "price": "4"},
+        {"name": "SPRITE", "price": "4"},
+        {"name": "SCHWEPPES", "price": "4"},
+        {"name": "ICE TEA", "price": "4"},
+        {"name": "SARIKIZ", "price": "3"},
+        {"name": "BORJOMI", "price": "3"},
+        {"name": "STILL WATER", "price": "2"},
+        {"name": "SPARKLING WATER", "price": "2"}
+      ]
+    }
   ]
 }
