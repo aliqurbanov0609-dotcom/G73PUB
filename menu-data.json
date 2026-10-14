@@ -1,0 +1,45 @@
+{
+  "kitchenCategories": [
+    {"id":"sandwiches","name":"SANDWICHES & BREAKFAST","items":[
+      {"id":"full-english","name":"FULL ENGLISH BREAKFAST","price":"16","image":"assets/photos/kitchen-dishes.jpg","ingredients":{"EN":["Eggs, bacon and sausages","Toast, mushrooms and tomatoes"],"AZ":["Yumurta, bekon və kolbasa","Tost, göbələk və pomidor"],"RU":["Яйца, бекон и сосиски","Тосты, грибы и томаты"]},"about":{"EN":"A hearty classic breakfast served hot from our kitchen.","AZ":"Mətbəximizdən isti təqdim olunan doyumlu klassik səhər yeməyi.","RU":"Сытный классический завтрак, подаётся горячим."}},
+      {"id":"omelette","name":"OMELETTE","price":"9","image":"assets/photos/omelette-hero.jpg","ingredients":{"EN":["Eggs","Sausages and bacon","Mushrooms","Fresh greens"],"AZ":["Yumurta","Kolbasa və bekon","Göbələk","Təzə göyərti"],"RU":["Яйца","Колбаски и бекон","Грибы","Свежая зелень"]},"about":{"EN":"Omelette made fresh in our kitchen, served with a little old-school pub spirit.","AZ":"Mətbəximizdə təzə hazırlanmış omlet, pub üslubunda təqdim olunur.","RU":"Омлет, приготовленный на нашей кухне и поданный в духе классического паба."}},
+      {"id":"hamburger","name":"HAMBURGER","price":"13","image":"assets/photos/kitchen-hero.jpg","ingredients":{"EN":["Beef patty","Sesame bun","Cheddar, lettuce and sauce"],"AZ":["Mal əti kotleti","Küncütlü bulka","Çedar, kahı və sous"],"RU":["Говяжья котлета","Булочка с кунжутом","Чеддер, салат и соус"]},"about":{"EN":"A juicy pub burger with classic toppings.","AZ":"Klassik əlavələrlə şirəli pub burgeri.","RU":"Сочный паб-бургер с классическими добавками."}},
+      {"id":"chicken-burger","name":"CHICKEN BURGER","price":"12","image":"assets/photos/kitchen-hero.jpg","ingredients":{"EN":["Chicken fillet","Sesame bun","Lettuce and house sauce"],"AZ":["Toyuq filesi","Küncütlü bulka","Kahı və xüsusi sous"],"RU":["Куриное филе","Булочка с кунжутом","Салат и фирменный соус"]},"about":{"EN":"Crispy chicken, fresh lettuce and house sauce in a toasted bun.","AZ":"Qızarmış toyuq, təzə kahı və xüsusi sous, qızardılmış bulkada.","RU":"Хрустящая курица, свежий салат и фирменный соус в поджаренной булочке."}},
+      {"id":"chicken-sandwich","name":"CHICKEN BREAST SANDWICH","price":"13","image":"assets/photos/kitchen-dishes.jpg"},
+      {"id":"club-sandwich","name":"CLUB SANDWICH","price":"15","image":"assets/photos/kitchen-dishes.jpg"},
+      {"id":"steak-sandwich","name":"STEAK SANDWICH","price":"15","image":"assets/photos/kitchen-dishes.jpg"},
+      {"id":"fish-sandwich","name":"FISH SANDWICH","price":"13","image":"assets/photos/kitchen-dishes.jpg"},
+      {"id":"toast-sandwich","name":"TOAST SANDWICH","price":"8","image":"assets/photos/kitchen-dishes.jpg"},
+      {"id":"chili-hotdogs","name":"CHILI CHEESE HOT DOGS","price":"6","image":"assets/photos/kitchen-dishes.jpg"},
+      {"id":"mexicana","name":"ALA MEXICANA SANDWICH","price":"13 / 11","image":"assets/photos/kitchen-dishes.jpg"},
+      {"id":"mix-salami","name":"MIX SALAMI SANDWICH","price":"15","image":"assets/photos/kitchen-dishes.jpg"},
+      {"id":"smoked-beef","name":"SMOKED BEEF SANDWICH","price":"12","image":"assets/photos/kitchen-dishes.jpg"},
+      {"id":"smoked-turkey","name":"SMOKED TURKEY SANDWICH","price":"12","image":"assets/photos/kitchen-dishes.jpg"},
+      {"id":"smoked-salmon","name":"SMOKED SALMON SANDWICH","price":"15","image":"assets/photos/kitchen-dishes.jpg"},
+      {"id":"bacon-roll","name":"BACON ROLL","price":"7","image":"assets/photos/kitchen-dishes.jpg"},
+      {"id":"liver-onion","name":"LIVER ONION ROLL","price":"6","image":"assets/photos/kitchen-dishes.jpg"},
+      {"id":"quesadillas","name":"QUESADILLAS","price":"13","image":"assets/photos/kitchen-dishes.jpg"},
+      {"id":"burrito-wrap","name":"BURRITO WRAP","price":"—","image":"assets/photos/kitchen-dishes.jpg"}
+    ]},
+    {"id":"soups","name":"SOUPS","items":[{"id":"soup-of-day","name":"SOUP OF THE DAY","price":"—","image":"assets/photos/kitchen-dishes.jpg"}]},
+    {"id":"salads","name":"SALADS","items":[{"id":"caesar-salad","name":"CAESAR SALAD","price":"—","image":"assets/photos/kitchen-dishes.jpg"}]},
+    {"id":"starters","name":"STARTERS","items":[{"id":"onion-rings","name":"ONION RINGS","price":"5","image":"assets/photos/kitchen-dishes.jpg"},{"id":"chicken-nuggets","name":"CHICKEN CAJUN NUGGETS","price":"8","image":"assets/photos/kitchen-dishes.jpg"},{"id":"potato-skins","name":"POTATO SKINS","price":"6","image":"assets/photos/kitchen-dishes.jpg"}]},
+    {"id":"pasta","name":"PASTA & GARNISH","items":[{"id":"pasta","name":"PASTA","price":"—","image":"assets/photos/kitchen-dishes.jpg"}]},
+    {"id":"poultry","name":"MAIN COURSE POULTRY","items":[{"id":"chicken-main","name":"CHICKEN MAIN COURSE","price":"—","image":"assets/photos/kitchen-dishes.jpg"}]},
+    {"id":"seafood","name":"MAIN COURSE SEA FOOD","items":[{"id":"fish-main","name":"SEAFOOD MAIN COURSE","price":"—","image":"assets/photos/kitchen-dishes.jpg"}]},
+    {"id":"meat","name":"MAIN COURSE MEAT","items":[{"id":"steak-main","name":"STEAK","price":"—","image":"assets/photos/kitchen-dishes.jpg"}]},
+    {"id":"desserts","name":"DESSERTS & HOT DRINKS","items":[{"id":"dessert","name":"DESSERT OF THE DAY","price":"—","image":"assets/photos/kitchen-dishes.jpg"}]}
+  ],
+  "barCategories": [
+    {"id":"draft-beer","name":"DRAFT BEER","items":[{"name":"GARAGE SPECIAL","price":"4 / 5","note":"Different sizes"},{"name":"GRIMBERGEN","price":"7 / 8","note":"Different sizes"},{"name":"GUINNESS","price":"8 / 10","note":"Different sizes"}]},
+    {"id":"bottled-beer","name":"BOTTLED BEER & CIDER","items":[{"name":"CORONA","price":"—"},{"name":"HEINEKEN","price":"—"},{"name":"CIDER","price":"—"}]},
+    {"id":"whiskey","name":"WHISKEY","items":[{"name":"JACK DANIEL'S","price":"—"},{"name":"MACALLAN 12","price":"—"},{"name":"JAMESON","price":"—"}]},
+    {"id":"rum","name":"RUM","items":[{"name":"HAVANA CLUB","price":"—"},{"name":"BACARDI","price":"—"}]},
+    {"id":"gin","name":"GIN","items":[{"name":"BOMBAY SAPPHIRE","price":"—"},{"name":"GIN & TONIC","price":"—"}]},
+    {"id":"vermouth","name":"VERMOUTH","items":[{"name":"MARTINI BIANCO","price":"—"},{"name":"MARTINI ROSSO","price":"—"}]},
+    {"id":"wine","name":"WINE & PROSECCO","items":[{"name":"RED WINE","price":"—"},{"name":"WHITE WINE","price":"—"},{"name":"MOËT","price":"—"}]},
+    {"id":"liqueurs","name":"LIQUEURS & BITTERS","items":[{"name":"JÄGERMEISTER","price":"—"},{"name":"BAILEYS","price":"—"}]},
+    {"id":"other","name":"OTHER SPIRITS","items":[{"name":"GREY GOOSE VODKA","price":"—"},{"name":"TEQUILA","price":"—"}]},
+    {"id":"soft","name":"SOFT DRINKS","items":[{"name":"COCA-COLA","price":"—"},{"name":"RED BULL","price":"—"},{"name":"WATER","price":"—"}]}
+  ]
+}
